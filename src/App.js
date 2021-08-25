@@ -37,7 +37,7 @@ const KeyPad = () => {
 };
 const App = () => {
   const [inputVal, setInputVal] = React.useState({ input: "", error: "" });
-
+  console.log(inputVal);
   function handleInputChange(e) {
     setInputVal((state) => ({ ...state, input: e.target.value }));
   }
@@ -92,7 +92,7 @@ const App = () => {
 
         setInputVal(({ input: inputVal, ...other }) => {
           if (inputVal.search(/^0/) !== -1) {
-            return inputVal.slice(1) + text;
+            return { ...other, input: inputVal.slice(1) + text };
           }
           inputVal = handleSomeSpecialCases(inputVal);
           return { ...other, input: inputVal + text };
