@@ -16,6 +16,7 @@ h2 {
   @media all and (max-width: 1024px) {
     width: 100%;
   }
+  user-select: none;
 }
 .btn-container {
   padding: 10px;
