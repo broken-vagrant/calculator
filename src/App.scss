@@ -1,0 +1,98 @@
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+h2 {
+  text-align: center;
+}
+.calc {
+  width: 600px;
+  background-color: hsla(13, 0%, 70%, 0.1);
+  border-radius: 6px;
+  border: 1px solid darken(lightgray, 0.3);
+  @media all and (max-width: 1024px) {
+    width: 100%;
+  }
+}
+.btn-container {
+  padding: 10px;
+}
+.screen {
+  margin: 1rem 0 0.2rem 0;
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  input {
+    border: 0;
+    outline: 0;
+    line-height: 2rem;
+    &:focus {
+      box-shadow: 2px 2px 4px rgba(239, 248, 249, 0.5),
+        -2px -2px 4px rgba(239, 248, 249, 0.5);
+    }
+  }
+}
+.screen.error-active {
+  border-color: red;
+}
+.error {
+  height: 1rem;
+  width: 100%;
+  padding: 0 0.2rem;
+  font-size: 0.8rem;
+}
+.buttons {
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+}
+.left-panel button,
+.right-panel button {
+  border-radius: 2px;
+  height: 40px;
+  padding: 2px;
+  margin: 3px;
+  background-color: rgba(253, 253, 252, 0.1);
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid lightgray;
+  color: #444;
+  outline: 0;
+
+  &:focus-visible {
+    border: 2px solid orange;
+  }
+  &:active {
+    background-color: lightgray;
+  }
+}
+.left-panel {
+  button {
+    width: 25%;
+  }
+  display: flex;
+  flex-flow: row wrap;
+  width: 80%;
+}
+.right-panel {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+input {
+  width: 100%;
+}
+button.green {
+  background-color: hsla(114, 67%, 30%, 0.76);
+  border-color: hsla(114, 67%, 30%, 0.8);
+  color: #eee;
+  outline: 0;
+  &:active {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  &:focus-visible {
+    border: 2px solid lightgray;
+  }
+}
