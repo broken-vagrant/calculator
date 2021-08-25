@@ -37,7 +37,7 @@ const KeyPad = () => {
 };
 const App = () => {
   const [inputVal, setInputVal] = React.useState({ input: "", error: "" });
-  console.log(inputVal);
+
   function handleInputChange(e) {
     setInputVal((state) => ({ ...state, input: e.target.value }));
   }
