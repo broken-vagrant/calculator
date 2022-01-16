@@ -46,7 +46,8 @@ const App = () => {
   }
   function evil(fnString) {
     // eslint-disable-next-line
-    return new Function("return " + fnString)();
+    // NEVER USE EVAL: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#never_use_eval!
+    return new Function('"use strict";return ' + fnString)();
   }
   const handleSomeSpecialCases = (inputVal) => {
     // only for FCC testing purpose
